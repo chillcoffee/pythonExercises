@@ -7,8 +7,6 @@ def get_quote():
     response.raise_for_status()
     quote_dict = response.json()
     canvas.itemconfig(quote_text, text=quote_dict["quote"])
-    #Write your code here.
-
 
 
 window = Tk()
