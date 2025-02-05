@@ -23,7 +23,7 @@ def is_iss_near():
     #My position is within +5 or -5 degrees of the ISS position.
     if MY_LAT - 5 <= iss_latitude <= MY_LAT + 5 and MY_LONG - 5 <= iss_longitude <= MY_LONG + 5:
         return True
-    return True
+
 
 def its_dark():
     parameters = {
@@ -42,7 +42,7 @@ def its_dark():
 
     if time_now >= sunset or time_now <= sunrise:
         return True
-    return True
+
 
 while True:
     time.sleep(60)
@@ -55,7 +55,7 @@ while True:
             to_addrs=TO_ADDRESS,
             msg="Subject:Look up!\n\nThe ISS is above you in the sky!"
         )
-    print("Look up!")
+
 
 
 
