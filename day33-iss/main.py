@@ -1,9 +1,11 @@
 import requests
 from datetime import datetime
 import smtplib
+import time
 
 MY_EMAIL = "chillcoffee.9419@gmail.com"
 MY_PASSWORD = "uwrqcnkcrhccqqje"
+TO_ADDRESS = "ruffaresentes@gmail.com"
 MY_LAT = 11.694760 # Your latitude
 MY_LONG = 122.366859 # Your longitude
 
@@ -21,6 +23,7 @@ def is_iss_near():
     #My position is within +5 or -5 degrees of the ISS position.
     if MY_LAT - 5 <= iss_latitude <= MY_LAT + 5 and MY_LONG - 5 <= iss_longitude <= MY_LONG + 5:
         return True
+    return True
 
 def its_dark():
     parameters = {
@@ -39,12 +42,21 @@ def its_dark():
 
     if time_now >= sunset or time_now <= sunrise:
         return True
+    return True
 
-
-if is_iss_near() and its_dark():
+while True:
+    time.sleep(60)
+    if is_iss_near() and its_dark():
+        connection = smtplib.SMTP("smtp.gmail.com")
+        connection.starttls()
+        connection.login(MY_EMAIL, MY_PASSWORD)
+        connection.sendmail(
+            from_addr=MY_EMAIL,
+            to_addrs=TO_ADDRESS,
+            msg="Subject:Look up!\n\nThe ISS is above you in the sky!"
+        )
     print("Look up!")
-# Then send me an email to tell me to look up.
-# BONUS: run the code every 60 seconds.
+
 
 
 
