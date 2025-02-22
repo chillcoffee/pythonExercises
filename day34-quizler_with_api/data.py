@@ -14,7 +14,6 @@ def get_questions():
 
 
 question_data = get_questions()
-print(question_data)
 
 # question_data = [
 #     {
