@@ -9,7 +9,7 @@ class QuizInterface:
     def __init__(self, quiz_brain: QuizBrain):
         self.quiz = quiz_brain
         self.window = Tk()
-        self.window.title("Quizzler")
+        self.window.title("Midterm Exam")
         self.window.config(bg=THEME_COLOR, padx=20, pady=20)
 
         self.label_score = Label(text="Score: ", fg="WHITE", bg=THEME_COLOR, font=("Arial", 14, "bold"))
@@ -46,7 +46,8 @@ class QuizInterface:
             q_text = self.quiz.next_question()
             self.canvas.itemconfig(self.question_text, text=q_text)
         else:
-            self.canvas.itemconfig(self.question_text, text="You've reached the end of quiz.")
+            self.canvas.itemconfig(self.question_text, text=f"Your score: {self.quiz.score}/100")
+            self.canvas.config(bg="white")
             self.button_true.config(state="disabled")
             self.button_false.config(state="disabled")
 
