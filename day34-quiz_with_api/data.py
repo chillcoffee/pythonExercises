@@ -13,107 +13,107 @@ def get_questions():
     return data["results"]
 
 
-question_data = get_questions()
+#question_data = get_questions()
 
-# question_data = [
-#     {
-#         "category": "Science: Computers",
-#         "type": "boolean",
-#         "difficulty": "medium",
-#         "question": "The HTML5 standard was published in 2014.",
-#         "correct_answer": "True",
-#         "incorrect_answers": [
-#             "False"
-#         ]
-#     },
-#     {
-#         "category": "Science: Computers",
-#         "type": "boolean",
-#         "difficulty": "medium",
-#         "question": "The first computer bug was formed by faulty wires.",
-#         "correct_answer": "False",
-#         "incorrect_answers": [
-#             "True"
-#         ]
-#     },
-#     {
-#         "category": "Science: Computers",
-#         "type": "boolean",
-#         "difficulty": "medium",
-#         "question": "FLAC stands for 'Free Lossless Audio Condenser'.",
-#         "correct_answer": "False",
-#         "incorrect_answers": [
-#             "True"
-#         ]
-#     },
-#     {
-#         "category": "Science: Computers",
-#         "type": "boolean",
-#         "difficulty": "medium",
-#         "question": "All program codes have to be compiled into an executable file in order to be run. This file can then be executed on any machine.",
-#         "correct_answer": "False",
-#         "incorrect_answers": [
-#             "True"
-#         ]
-#     },
-#     {
-#         "category": "Science: Computers",
-#         "type": "boolean",
-#         "difficulty": "easy",
-#         "question": "Linus Torvalds created Linux and Git.",
-#         "correct_answer": "True",
-#         "incorrect_answers": [
-#             "False"
-#         ]
-#     },
-#     {
-#         "category": "Science: Computers",
-#         "type": "boolean",
-#         "difficulty": "easy",
-#         "question": "The programming language 'Python' is based off a modified version of 'JavaScript'",
-#         "correct_answer": "False",
-#         "incorrect_answers": [
-#             "True"
-#         ]
-#     },
-#     {
-#         "category": "Science: Computers",
-#         "type": "boolean",
-#         "difficulty": "medium",
-#         "question": "AMD created the first consumer 64-bit processor.",
-#         "correct_answer": "True",
-#         "incorrect_answers": [
-#             "False"
-#         ]
-#     },
-#     {
-#         "category": "Science: Computers",
-#         "type": "boolean",
-#         "difficulty": "easy",
-#         "question": "'HTML' stands for Hypertext Markup Language.",
-#         "correct_answer": "True",
-#         "incorrect_answers": [
-#             "False"
-#         ]
-#     },
-#     {
-#         "category": "Science: Computers",
-#         "type": "boolean",
-#         "difficulty": "easy",
-#         "question": "In most programming languages, the operator ++ is equivalent to the statement '+= 1'.",
-#         "correct_answer": "True",
-#         "incorrect_answers": [
-#             "False"
-#         ]
-#     },
-#     {
-#         "category": "Science: Computers",
-#         "type": "boolean",
-#         "difficulty": "hard",
-#         "question": "The IBM PC used an Intel 8008 microprocessor clocked at 4.77 MHz and 8 kilobytes of memory.",
-#         "correct_answer": "False",
-#         "incorrect_answers": [
-#             "True"
-#         ]
-#     }
-# ]
+question_data = [
+    {
+        "category": "Science: Computers",
+        "type": "boolean",
+        "difficulty": "medium",
+        "question": "A constructor is a special method that has the same name as the class name and has no return type",
+        "correct_answer": "True",
+        "incorrect_answers": [
+            "False"
+        ]
+    },
+    {
+        "category": "Science: Computers",
+        "type": "boolean",
+        "difficulty": "medium",
+        "question": "Objects are actual instance of a class.",
+        "correct_answer": "True",
+        "incorrect_answers": [
+            "False"
+        ]
+    },
+    {
+        "category": "Science: Computers",
+        "type": "boolean",
+        "difficulty": "medium",
+        "question": "Attributes are components of an object that hold values.",
+        "correct_answer": "True",
+        "incorrect_answers": [
+            "False"
+        ]
+    },
+    {
+        "category": "Science: Computers",
+        "type": "boolean",
+        "difficulty": "medium",
+        "question": "Constructor is a blueprint for creating objects.",
+        "correct_answer": "False",
+        "incorrect_answers": [
+            "True"
+        ]
+    },
+    {
+        "category": "Science: Computers",
+        "type": "boolean",
+        "difficulty": "easy",
+        "question": "In order to instantiate objects, you have to use the new keyword.",
+        "correct_answer": "True",
+        "incorrect_answers": [
+            "False"
+        ]
+    },
+    {
+        "category": "Science: Computers",
+        "type": "boolean",
+        "difficulty": "easy",
+        "question": "Objects are used for method calls.",
+        "correct_answer": "True",
+        "incorrect_answers": [
+            "False"
+        ]
+    },
+    {
+        "category": "Science: Computers",
+        "type": "boolean",
+        "difficulty": "medium",
+        "question": "Methods are functions that belong to an object.",
+        "correct_answer": "True",
+        "incorrect_answers": [
+            "False"
+        ]
+    },
+    {
+        "category": "Science: Computers",
+        "type": "boolean",
+        "difficulty": "easy",
+        "question": "A method should have a void return type if it does not return a value.",
+        "correct_answer": "True",
+        "incorrect_answers": [
+            "False"
+        ]
+    },
+    {
+        "category": "Science: Computers",
+        "type": "boolean",
+        "difficulty": "easy",
+        "question": "Java allows multiple inheritance.",
+        "correct_answer": "False",
+        "incorrect_answers": [
+            "True"
+        ]
+    },
+    {
+        "category": "Science: Computers",
+        "type": "boolean",
+        "difficulty": "hard",
+        "question": "To use an interface you have to implement it.",
+        "correct_answer": "True",
+        "incorrect_answers": [
+            "False"
+        ]
+    }
+]
