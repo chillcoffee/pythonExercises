@@ -1,12 +1,15 @@
+import os
+
 import requests
 from datetime import datetime
 
-APP_ID = "8e77ddd6"
-APP_KEY = "401442e6ba4bf654cbd3995f8a64af87"
+APP_ID = os.environ.get("APP_ID")
+APP_KEY = os.environ.get("APP_KEY")
+AUTHORIZATION = os.environ.get("AUTHORIZATION")
 
-nutritionix_endpoint = "https://trackapi.nutritionix.com/v2/natural/exercise"
-what_i_did = "ran 2 miles for 30 mins and walk 3 km for 15 mins"
-#what_i_did = input("Tell me what you did: ")
+nutritionix_endpoint = os.environ.get("nutritionix_endpoint")
+#what_i_did = "ran 2 miles for 30 mins and walk 3 km for 15 mins"
+what_i_did = input("Tell me what you did: ")
 user_params = {
     "query": what_i_did,
     "weight_kg": 55,
@@ -14,19 +17,22 @@ user_params = {
     "age": 31,
 }
 
-headers = {
+nutritionix_headers = {
     "x-app-id": APP_ID,
     "x-app-key": APP_KEY
 }
 
-response = requests.post(nutritionix_endpoint, json=user_params, headers=headers)
+response = requests.post(nutritionix_endpoint, json=user_params, headers=nutritionix_headers)
 print(response.status_code)
-result = response.json()
+result = response.json()  #this is the json from nutriotinix
 #print(result["exercises"])
 
 today_date = datetime.now().strftime("%d/%m/%Y")
 now_time = datetime.now().strftime("%X")
-sheet_endpoint = "https://api.sheety.co/dca3ae1b6cd5aafc699bf906e187f2a7/workoutTracking/workouts"
+sheet_endpoint = os.environ.get("sheet_endpoint")
+sheety_headers = {
+    "Authorization": AUTHORIZATION
+}
 
 for exercise in result["exercises"]:
     sheet_inputs = {
@@ -39,9 +45,6 @@ for exercise in result["exercises"]:
         }
     }
 
-    sheet_response = requests.post(sheet_endpoint, json=sheet_inputs)
+    sheet_response = requests.post(sheet_endpoint, json=sheet_inputs, headers=sheety_headers)
 
     print(sheet_response.text)
-
-
-
